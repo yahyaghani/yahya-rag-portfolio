@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaCode, FaPlay, FaImage, FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
 
 const ProjectCard = ({ project }) => {
   const [page, setPage] = useState(1);
@@ -76,10 +76,26 @@ const ProjectCard = ({ project }) => {
         )}
         {page === 3 && (
           <div className="flex justify-center">
-            <video controls className="w-full">
-              <source src={project.video} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            {project.video.includes('arcade.software') ? (
+              <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, width: '100%' }}>
+                <iframe
+                  src={project.video}
+                  title={project.name}
+                  frameBorder="0"
+                  loading="lazy"
+                  webkitallowfullscreen="true"
+                  mozallowfullscreen="true"
+                  allowFullScreen
+                  allow="clipboard-write"
+                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                ></iframe>
+              </div>
+            ) : (
+              <video controls className="w-full">
+                <source src={project.video} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            )}
           </div>
         )}
         <div className="flex justify-center mt-4">
