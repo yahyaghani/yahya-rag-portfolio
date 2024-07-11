@@ -1,7 +1,7 @@
 export const experiences = [
   {
     id: 1,
-    title: 'Founder / AI Lead / Creative Product Engineer',
+    title: 'SoloFounder ',
     company: "Caddie AI",
     duration: "(2023 - 2024)",
     query:"What was Yahya's Experience @ Caddie AI",
@@ -16,14 +16,6 @@ export const experiences = [
   },
   {
     id: 3,
-    title: "Founder",
-    company: "Dzynin AI Agency",
-    duration: "(2020 - 2023)",
-    query:"What was Yahya's Experience @ Dzynin AI Agency"
-
-  },
-  {
-    id: 4,
     title: "NLP Developer",
     company: "American Heart Association",
     duration: "(2020)",
@@ -31,7 +23,7 @@ export const experiences = [
 
   },
   {
-    id: 5,
+    id: 4,
     title: "Founding Engineer",
     company: "Image Restoration Center",
     duration: "(2019 - 2021)",
@@ -39,11 +31,10 @@ export const experiences = [
 
   },
   {
-    id: 6,
+    id: 5,
     title: "Intern - Product Engineer",
     company: "Skyscanner",
-    duration: "(2018)",
+    duration: "(2019)",
     query:"What was Yahya's Experience @ Skyscanner"
-
   }
 ];
