@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
+import ReactMarkdown from 'react-markdown';
 import './ChatWidget.css';
 
 const ChatWidget = ({ isOpen, setIsOpen, initialMessage }) => {
@@ -34,7 +35,6 @@ const ChatWidget = ({ isOpen, setIsOpen, initialMessage }) => {
     try {
       // const response = await fetch('http://localhost:5000/query', {
       const response = await fetch('https://back.yahyaghani.com/query', { // Updated endpoint
-
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ const ChatWidget = ({ isOpen, setIsOpen, initialMessage }) => {
           <div className="overflow-y-auto border-t-[2px] border-indigo-900 px-2 lg:px-4 py-2 lg:py-4 chat-body">
             {messages.map((message, index) => (
               <div key={index} className={`chat-message ${message.sender === 'user' ? 'text-green-400' : 'text-blue-400'}`}>
-                {message.text}
+                <ReactMarkdown>{message.text}</ReactMarkdown>
               </div>
             ))}
           </div>
