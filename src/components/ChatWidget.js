@@ -32,7 +32,9 @@ const ChatWidget = ({ isOpen, setIsOpen, initialMessage }) => {
     setMessages([...messages, newMessage]);
 
     try {
-      const response = await fetch('http://localhost:5000/query', {
+      // const response = await fetch('http://localhost:5000/query', {
+      const response = await fetch('https://back.yahyaghani.com/query', { // Updated endpoint
+
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
