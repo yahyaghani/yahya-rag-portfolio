@@ -39,6 +39,8 @@ body {
   /* // padding-top: calc(var(--index) * 2.5rem); */
   top: calc(var(--index) * 4rem);
   max-width:90vw;
+  margin-bottom: 200px; /* Add margin to ensure visibility */
+
 }
 
 .custom-green-bg {
