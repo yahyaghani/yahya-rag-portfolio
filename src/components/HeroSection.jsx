@@ -66,73 +66,110 @@ const HeroSection = () => {
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
                 <span className="text-gray-400">{`'`}</span>
-                <span className="text-amber-300">Yahya Ghani</span>
+                <span className="text-green-300">Yahya Ghani</span>
                 <span className="text-gray-400">{`',`}</span>
               </div>
+             
               <div className="ml-4 lg:ml-8 mr-2">
-                <span className="text-white">skills:</span>
-                <span className="text-gray-400">{`['`}</span>
-                <span className="text-amber-300">React</span>
+                <span className="text-white">Dev:</span>
+                <span className="text-gray-400">{` ['`}</span>
+                <span className="text-green-300">Python (Flask/Django)</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">NextJS</span>
+                <span className="text-green-300">React (TS/Native)</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Redux</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Express</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">NestJS</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">MySql</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">MongoDB</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Docker</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">AWS</span>
+                <span className="text-green-300">PHP</span>
                 <span className="text-gray-400">{"'],"}</span>
               </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">hardWorker:</span>
-                <span className="text-orange-400">true</span>
-                <span className="text-gray-400">,</span>
+              <div className="ml-4 lg:ml-8 mr-2">
+                <span className="text-white">ML:</span>
+                <span className="text-gray-400">{` ['`}</span>
+                <span className="text-green-300">Tensorflow</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-green-300">Torch</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-green-300">Keras</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-green-300">Spacy</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-green-300">NLTK</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-green-300">OpenCV</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-green-300">Sci-kit</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">CUDA</span>
+                <span className="text-gray-400">{"'],"}</span>
               </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">quickLearner:</span>
-                <span className="text-orange-400">true</span>
-                <span className="text-gray-400">,</span>
+              <div className="ml-4 lg:ml-8 mr-2">
+                <span className="text-white">LLMOPS:</span>
+                <span className="text-gray-400">{` ['`}</span>
+                <span className="text-green-300">GPT2+Finetune</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-green-300">RAGOps</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-green-300">LangChain</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-green-300">LlamaIndex</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">W&B</span>
+                <span className="text-gray-400">{"'],"}</span>
               </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">problemSolver:</span>
-                <span className="text-orange-400">true</span>
-                <span className="text-gray-400">,</span>
+              <div className="ml-4 lg:ml-8 mr-2">
+                <span className="text-white">Infra:</span>
+                <span className="text-gray-400">{` ['`}</span>
+                <span className="text-green-300">SQL</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-green-300">NoSql</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">GraphQl</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-green-300">GCP</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">AWS</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">Kubernetes</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-green-300">Docker</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-green-300">Celery</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-green-300">Socket</span>
+                <span className="text-gray-400">{"'],"}</span>
               </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-green-400">hireable:</span>
-                <span className="text-orange-400">function</span>
-                <span className="text-gray-400">{'() {'}</span>
+              <div className="ml-4 lg:ml-8 mr-2">
+                <span className="text-white">Misc:</span>
+                <span className="text-gray-400">{` ['`}</span>
+                <span className="text-green-300">Linux</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-green-300">Gimp</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">Blender</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">Unity</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">Figma</span>
+                <span className="text-gray-400">{"'],"}</span>
               </div>
-              <div>
-                <span className="ml-8 lg:ml-16 mr-2 text-orange-400">return</span>
-                <span className="text-gray-400">{`(`}</span>
+              <div className="ml-4 lg:ml-8 mr-2">
+                <span className="text-white">Papers:</span>
+                <span className="text-gray-400">{` ['`}</span>
+                <span className="text-green-300">ReAct</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">AIAYN</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-green-300">BERT</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">CLIP</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-green-300">Swin</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">TableNet</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-green-300">GPT</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-green-300">MobileNetV3</span>
+                <span className="text-gray-400">{"'],"}</span>
               </div>
-              <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-white">hardWorker</span>
-                <span className="text-amber-300">&amp;&amp;</span>
-              </div>
-              <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-white">problemSolver</span>
-                <span className="text-amber-300">&amp;&amp;</span>
-              </div>
-              <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-white">skills.length</span>
-                <span className="mr-2 text-amber-300">&gt;=</span>
-                <span className="text-orange-400">5</span>
-              </div>
-              <div><span className="ml-8 lg:ml-16 mr-2 text-gray-400">{`);`}</span></div>
-              <div><span className="ml-4 lg:ml-8 text-gray-400">{`};`}</span></div>
               <div><span className="text-gray-400">{`};`}</span></div>
             </code>
           </div>
