@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import '../card.css';
 
-const GlowCard = ({ children, identifier, onClick }) => {
+const GlowCard = ({ children, identifier, onClick, width }) => {
   useEffect(() => {
     const CONTAINER = document.querySelector(`.glow-container-${identifier}`);
     const CARDS = document.querySelectorAll(`.glow-card-${identifier}`);
@@ -66,9 +66,9 @@ const GlowCard = ({ children, identifier, onClick }) => {
 
   return (
     <div className={`glow-container-${identifier} glow-container`} onClick={onClick}>
-      <article className={`glow-card glow-card-${identifier} h-fit cursor-pointer border border-[#2a2e5a] transition-all duration-300 relative bg-[#101123] text-gray-200 rounded-xl hover:border-transparent w-full`}>
+      <article className={`glow-card glow-card-${identifier} cursor-pointer border border-[#2a2e5a] transition-all duration-300 relative bg-[#101123] text-gray-200 rounded-xl hover:border-transparent`} style={{ width: `${width}px`, height: '150px' }}>
         <div className="glows"></div>
-        <div className="relative z-10">
+        <div className="relative z-10 h-full">
           {children}
         </div>
       </article>

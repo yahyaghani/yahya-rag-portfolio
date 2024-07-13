@@ -4,6 +4,14 @@ import { BsPersonWorkspace } from 'react-icons/bs';
 import GlowCard from './helpers/GlowCard';
 
 const Experience = ({ onCardClick }) => {
+  const getWidthPercentage = (months) => {
+    const maxMonths = Math.max(...experiences.map(e => e.months));
+    const minWidth = 200; // Minimum width in pixels
+    const maxWidth = 400; // Maximum width in pixels
+    const width = ((months / maxMonths) * (maxWidth - minWidth)) + minWidth;
+    return width;
+  };
+
   return (
     <div id="experience" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
       <img
@@ -30,8 +38,9 @@ const Experience = ({ onCardClick }) => {
                 key={experience.id}
                 identifier={`experience-${experience.id}`}
                 onClick={() => onCardClick(experience.query)}
+                width={getWidthPercentage(experience.months)}
               >
-                <div className="p-3 relative">
+                <div className="p-3 relative overflow-hidden h-full">
                   <img
                     src="/blur-23.svg"
                     alt="BlurSvg"
@@ -48,7 +57,7 @@ const Experience = ({ onCardClick }) => {
                     <div className="text-violet-500 transition-all duration-300 hover:scale-125">
                       <BsPersonWorkspace size={36} />
                     </div>
-                    <div>
+                    <div className="overflow-hidden">
                       <p className="text-base sm:text-xl mb-2 font-medium uppercase">
                         {experience.title}
                       </p>
