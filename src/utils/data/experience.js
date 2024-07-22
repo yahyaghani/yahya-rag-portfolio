@@ -1,12 +1,12 @@
 export const experiences = [
-  {
-    id: 1,
-    title: 'CTO ',
-    company: "Stealth",
-    duration: "(Mar 2024 - Jul 2024)",
-    query:"What was Yahya's Experience @ Stealth AI Startup",
-    months: 4
-  },
+  // {
+  //   id: 1,
+  //   title: 'CTO ',
+  //   company: "Stealth",
+  //   duration: "(Mar 2024 - Jul 2024)",
+  //   query:"What was Yahya's Experience @ Stealth AI Startup",
+  //   months: 4
+  // },
   {
     id: 2,
     title: 'SoloFounder ',
