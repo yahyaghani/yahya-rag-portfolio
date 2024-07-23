@@ -17,7 +17,7 @@ export const experiences = [
   },
   {
     id: 3,
-    title: "AI Product Lead",
+    title: "Full Stack Ai Lead",
     company: "PerformanceGolf.com",
     duration: "(Nov 2021 - Jan 2023)",
     query:"What was Yahya's Experience @ PerformanceGolf.com",
