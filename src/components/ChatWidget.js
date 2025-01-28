@@ -6,6 +6,7 @@ import './ChatWidget.css';
 const ChatWidget = ({ isOpen, setIsOpen, initialMessage }) => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
+  const [loading, setLoading] = useState(false); // New state to track loading
 
   useEffect(() => {
     if (initialMessage) {
@@ -16,7 +17,10 @@ const ChatWidget = ({ isOpen, setIsOpen, initialMessage }) => {
 
   useEffect(() => {
     if (isOpen) {
-      document.querySelector('.chat-window .chat-body').scrollTop = document.querySelector('.chat-window .chat-body').scrollHeight;
+      const chatBody = document.querySelector('.chat-window .chat-body');
+      if (chatBody) {
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }
     }
   }, [messages, isOpen]);
 
@@ -31,10 +35,10 @@ const ChatWidget = ({ isOpen, setIsOpen, initialMessage }) => {
   const handleSendMessage = async (messageText) => {
     const newMessage = { text: messageText || input, sender: 'user' };
     setMessages([...messages, newMessage]);
+    setLoading(true); // Start loading
 
     try {
-      // const response = await fetch('http://localhost:5000/query', {
-      const response = await fetch('https://back.yahyaghani.com/query', { // Updated endpoint
+      const response = await fetch('https://back.yahyaghani.com/query', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -47,6 +51,10 @@ const ChatWidget = ({ isOpen, setIsOpen, initialMessage }) => {
       setMessages((prevMessages) => [...prevMessages, botMessage]);
     } catch (error) {
       console.error('Error fetching response:', error);
+      const errorResponse = { text: 'Failed to fetch response.', sender: 'bot' };
+      setMessages((prevMessages) => [...prevMessages, errorResponse]);
+    } finally {
+      setLoading(false); // Stop loading regardless of the outcome
     }
 
     setInput('');
@@ -70,6 +78,11 @@ const ChatWidget = ({ isOpen, setIsOpen, initialMessage }) => {
                 <ReactMarkdown>{message.text}</ReactMarkdown>
               </div>
             ))}
+            {loading && (
+              <div className="chat-message text-center">
+                <div className="loader"></div> {/* Add CSS for the loader animation */}
+              </div>
+            )}
           </div>
           <div className="flex flex-row">
             <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
@@ -84,7 +97,7 @@ const ChatWidget = ({ isOpen, setIsOpen, initialMessage }) => {
               className="flex-1 px-4 py-2 rounded-l-lg border-2 border-indigo-900 placeholder-gray-500 bg-[#101123] text-gray-200"
             />
             <button
-              onClick={() => handleSendMessage(input)}
+              onClick={() => handleSendMessage()}
               className="flex items-center px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-r-lg"
             >
               <span>Send</span>

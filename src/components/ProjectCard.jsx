@@ -5,7 +5,7 @@ const ProjectCard = ({ project }) => {
   const [page, setPage] = useState(1);
 
   const nextPage = () => {
-    setPage(page === 3 ? 1 : page + 1);
+    setPage(page === 2 ? 1 : page + 1);
   };
 
   return (
@@ -70,7 +70,7 @@ const ProjectCard = ({ project }) => {
             <div><span className="text-gray-400">{`}`}</span></div>
           </code>
         )}
-        {page === 2 && (
+        {/* {page === 2 && (
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex flex-col items-center">
               <img src={project.image1} alt={project.name} className="w-full h-48 object-cover" />
@@ -81,8 +81,8 @@ const ProjectCard = ({ project }) => {
               <img src={project.image2} alt={project.name} className="w-full h-48 object-cover" />
             </div>
           </div>
-        )}
-        {page === 3 && (
+        )} */}
+        {page === 2 && (
           <div className="flex justify-center">
             {project.video.includes('arcade.software') ? (
               <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, width: '100%' }}>
