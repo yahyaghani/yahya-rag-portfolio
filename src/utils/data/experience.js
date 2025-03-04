@@ -11,25 +11,25 @@ export const experiences = [
     id: 2,
     title: 'SoloFounder ',
     company: "Caddie AI",
-    duration: "(Jul 2023 - Mar 2024)",
+    duration: "(Jul 2023 - Dec 2024)",
     query:"What was Yahya's Experience @ Caddie AI",
-    months: 8
+    months: 20
   },
   {
     id: 3,
     title: "Full Stack Ai Lead",
     company: "PerformanceGolf.com",
-    duration: "(Nov 2021 - Jan 2023)",
+    duration: "(Dec 2021 - Jan 2023)",
     query:"What was Yahya's Experience @ PerformanceGolf.com",
-    months: 14
+    months: 24
   },
   {
     id: 4,
     title: "Founding Engineer",
     company: "Image Restoration Center",
-    duration: "(Sep 2020 - Dec 2021)",
+    duration: "(Aug 2020 - Mar 2022)",
     query:"What was Yahya's Experience @ Image Restoration Center",
-    months: 15
+    months: 20
   },
   {
     id: 5,
